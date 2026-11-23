@@ -1,0 +1,5 @@
+name = "diagnose_gaps"
+description = "Diagnose a student's practice gaps from course materials and actual quiz answers."
+developer_instructions = """
+Follow .agent/diagnose-gaps.md and its linked procedure.
+"""

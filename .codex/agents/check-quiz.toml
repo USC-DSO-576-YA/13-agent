@@ -1,0 +1,5 @@
+name = "check_quiz"
+description = "Independently verify a draft practice quiz, its answer key, and alignment with course sources."
+developer_instructions = """
+Follow .agent/check-quiz.md and its linked procedure.
+"""

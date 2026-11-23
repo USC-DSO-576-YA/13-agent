@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "root=\"$(git rev-parse --show-toplevel 2>/dev/null)\" || root=\"$PWD\"; exec python3 \"$root/.codex/hooks/ai_diary.py\"",
+            "timeout": 5,
+            "statusMessage": "Loading previous diary entry"
+          }
+        ],
+        "matcher": "^(startup|resume|fork|clear)$"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "root=\"$(git rev-parse --show-toplevel 2>/dev/null)\" || root=\"$PWD\"; exec python3 \"$root/.codex/hooks/ai_diary.py\"",
+            "timeout": 5,
+            "statusMessage": "Saving diary checkpoint"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "root=\"$(git rev-parse --show-toplevel 2>/dev/null)\" || root=\"$PWD\"; exec python3 \"$root/.codex/hooks/ai_diary.py\"",
+            "timeout": 3,
+            "statusMessage": "Finalizing session diary"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+name = "create_targeted_quiz"
+description = "Draft targeted practice quizzes and answer keys."
+developer_instructions = """
+Follow .agent/create-targeted-quiz.md and its linked procedure.
+"""

@@ -1,0 +1,9 @@
+name = "targeted_quiz_workflow"
+description = "Coordinate a student's targeted quiz round through diagnosis, drafting, independent checking, practice, and feedback."
+developer_instructions = """
+Read .agent/README.md and follow its targeted quiz workflow. 
+Step 1. use @diagnose_gaps to see what are the gaps that. have in learning python
+give the top 3 gaps as output in a table
+Step 2. use the result of previous step to @create_targeted_quiz 
+Step 3: Use @check_quiz to validate the final quiz that i have.
+"""
